@@ -1,0 +1,137 @@
+
+
+.menu {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+
+}
+h2 {
+    margin-right: auto;
+    margin-left: 20px;
+}
+input[id="submit"] {
+    background-color: rgb(91, 191, 241);
+    border:none;
+    color: white;
+    padding: 5px;
+    border-radius: 5%;
+}
+.bloque1 {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px #a2a0a0;
+    margin-top: 10px;
+}
+.color {
+    background-color: rgb(91, 191, 241);
+    width: 100%;
+    height: 60px;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: white 5px solid;
+    position : absolute;
+    margin-top: 20px;
+    margin-left: 10px;
+
+    
+}
+.nombre {
+    margin-top: 70px;
+    margin-left: 10px;
+}
+
+.bloque2 {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px #a2a0a0;
+    margin-top: 10px;
+}
+p {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+h3 {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.bloque3 {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px #a2a0a0;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    
+}
+
+.fotos {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: gray 2px solid;
+}
+
+.bloque4 {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px #a2a0a0;
+    width: 100%;
+
+}
+.principal {
+    display: flex;
+    flex-direction: row;
+}
+.container {
+    width: 60%;
+    margin-right: 20px;
+}
+.container2{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    width: 38% ;
+    margin-top: 10px;
+}
+.persona{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+.persona2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+.sq{
+    height: 50px;
+    width: 50px;
+    border-radius: 15%;
+    border: rgb(91, 191, 241) 1px solid;
+    margin-left: 10px;
+}
+.check{
+    height: 30px;
+    width: 110px;
+    margin-left: 20px;
+}
