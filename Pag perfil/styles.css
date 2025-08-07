@@ -135,3 +135,14 @@ h3 {
     width: 110px;
     margin-left: 20px;
 }
+.rueda{
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.conf{
+    color:  rgb(91, 191, 241);
+    display: flex;;
+    font-size: -15px;
+}
