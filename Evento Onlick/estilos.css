@@ -1,0 +1,50 @@
+.container{
+    background-color: rgb(193, 190, 190);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#buscar{
+    width: 600px;
+    height: 20px;
+}
+.inicio{
+    background-color: rgb(69, 184, 234);
+    color: white;
+    border: black 1px solid;
+}
+
+.container4{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.bloque1{
+    border: black 1px solid;
+}
+.bloque2{
+    border: black 1px solid;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+.container3{
+    border: black 1px solid;
+    width: 30%;
+    height: 100px;
+}
+
+.like{
+    background-color: rgb(255, 255, 153);
+}
+.definicion{
+    background-color: darkgreen;
+    color: white;
+}

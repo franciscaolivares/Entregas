@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+main{
+    background-color:gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+}
+p {
+    white-space: nowrap;
+}
+img{
+    height: 120px;
+    width: 120px;
+}
+.bloqueizq{
+    border: black 2px solid;
+    height: 300px;
+    width: 200px;
+    font-size: 20px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+}
+.bloqueder{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.primer{
+    font-size: x-large;
+    padding-left: 20%;
+    margin-left: 10px;
+}
+.seg, .ter, .cuar{
+    border: black 1px solid;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(243, 243, 243);
+    margin: 10px;
+
+}
+.nombres{
+    font-size: large;
+}
+.acciones{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px; 
+    width: 100%;
+}
+button{
+    background-color: rgb(220, 202, 66);
+}
