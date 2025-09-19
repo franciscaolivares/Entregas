@@ -17,6 +17,6 @@ public interface RepositorioCanciones extends CrudRepository<Cancion, Long> {
      * VALUES()
      */
     /*Cancion save(Cancion cancion);*/
-
     
+    Cancion save(Cancion nuevaCancion);
 }
