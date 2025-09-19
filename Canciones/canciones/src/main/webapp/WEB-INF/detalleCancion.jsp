@@ -19,7 +19,18 @@
                 <p>Album: ${cancion.album}</p>
                 <p>Género: ${cancion.genero}</p>
                 <p>Idioma: ${cancion.idioma}</p>
+                <form method="GET" action="/canciones/formulario/editar/${cancion.id}">
+                    <button class="btn btn-secondary">
+                        Actualizar
+                    </button>  
+                </form>      
         </div>
+        <form method="POST" action="/canciones/eliminar/${cancion.id}">
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="btn btn-danger">
+            Eliminar
+            </button>
+        </form>    
         <a href="/canciones">Volver a lista de canciones.</a>
     </body>
 </html>

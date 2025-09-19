@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,10 @@ import jakarta.validation.Valid;
 
 import java.util.List;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
+
+
 
 
 
@@ -65,4 +70,32 @@ public String formularioAgregarCancion(@ModelAttribute("nuevaCancion") Cancion n
     this.servicioCanciones.agregarCancion(nuevaCancion);
     return "redirect:/canciones";
                                         }
+
+    @DeleteMapping ("/canciones/eliminar/{id}")
+    public String procesarEliminarCancion(@PathVariable("id") Long idCancion){
+        this.servicioCanciones.eliminarCancion(idCancion);
+        return "redirect:/canciones";
+    }
+
+    @GetMapping("/canciones/formulario/editar/{id}")
+    public String formularioEditarCancion (@PathVariable ("id") Long idCancion,
+                                            Model modelo ){
+        Cancion cancion = this.servicioCanciones.obtenerCancionPorId(idCancion);
+        modelo.addAttribute("cancion", cancion);
+
+        return "editarCancion";
+    }
+    
+    @PutMapping("/canciones/processa/editar/{id}")
+    public String procesaEditarCancion (@Valid @ModelAttribute("cancion") Cancion cancion,
+                                        BindingResult validaciones,
+                                        @PathVariable ("id") Long idCancion){
+        if (validaciones.hasErrors()){
+            return "editarCancion";
+                                        }  
+        cancion.setId(idCancion); 
+        this.servicioCanciones.actualizaCancion(cancion);
+        return "redirect:/canciones";                                    
+                                        }
+    
 }
