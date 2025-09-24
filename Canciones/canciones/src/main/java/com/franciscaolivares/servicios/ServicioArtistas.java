@@ -26,4 +26,15 @@ public class ServicioArtistas {
         return this.repositorioArtistas.findById(idArtista).orElse(null);
 
     }
+
+    // Agregar un nuevo artista a la base de datos 
+    public Artista agregarArtista (Artista nuevoArtista){
+        return this.repositorioArtistas.save(nuevoArtista);
+    }
+
+    public List<Artista> desplegarArtistas() {
+        return this.repositorioArtistas.findAll();
+    }
+
+    
 }

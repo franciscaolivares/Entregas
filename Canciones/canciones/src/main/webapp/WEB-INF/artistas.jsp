@@ -12,28 +12,23 @@
         <link rel="stylesheet" href="/css/estilos.css">
     </head>
     <body>
-        <h1>Listado de Canciones</h1>
+        <h1>Listado de Artistas</h1>
         <table>
         <thead>
             <tr>
-                <th>Título</th>
                 <th>Artista</th>
-                <th>Detalle</th>
             </tr>
         </thead>
         <tbody>
-            <c:forEach var="cancion" items="${canciones}">
+            <c:forEach var="artista" items="${artistas}">
             <tr>
-                <td>${cancion.titulo}</td>
-                <td>${cancion.artista.nombre} ${cancion.artista.apellido}</td>
+                <td>${artista.nombre} ${artista.apellido}</td>
                 <td >
-                    <a href="/canciones/detalle/${cancion.id}">Ver detalle</a>
+                    <a href="/artistas/detalle/${artista.id}">Ver detalle</a>
             </tr>
             </c:forEach>
         </tbody>
         </table>
-        <a href="/canciones/formulario/agregar">Agregar canción </a>
-        
-        <a href="/artistas">Ir a artistas </a>
+        <a href="/canciones">Ir a canciones </a>
     </body>
 </html>
