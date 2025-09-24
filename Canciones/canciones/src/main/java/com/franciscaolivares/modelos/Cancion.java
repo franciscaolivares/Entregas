@@ -5,6 +5,8 @@ import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.Size;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.GeneratedValue;
@@ -26,8 +28,9 @@ public class Cancion {
     @Size (min=5, message="Por favor proporciona el título de la canción")
     private String titulo;
 
-    @Size (min=3, message="Por favor proporciona el artista de la canción")
-    private String artista;
+    @ManyToOne
+    @JoinColumn(name="id_artista")
+    private Artista artista; // Relación Many-to-One con objeto artista, importante el nombre es el mismo nombre que pusimos en mappedBy en Artista.java
 
     @Size (min=3, message="Por favor proporciona el álbum de la canción")
     private String album;
@@ -64,11 +67,11 @@ public class Cancion {
         this.titulo = titulo;
     }
 
-    public String getArtista() {
+    public Artista getArtista() {
         return artista;
     }
-
-    public void setArtista(String artista) {
+// Cambiar el objeto, ya no es un string sino un objeto tipo artista (cuando hacemos la relacion Many to One)
+    public void setArtista(Artista artista) {
         this.artista = artista;
     }
 

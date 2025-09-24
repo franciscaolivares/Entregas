@@ -15,35 +15,40 @@
         <div class="formulario">
         <form:form action="/canciones/procesa/agregar" method="POST" modelAttribute="nuevaCancion">
             <div>
-                <form:label path="titulo">
+                <form:label class = "form-label" path="titulo">
                     Título:
                 </form:label> 
                 <form:input path="titulo" type="text"/>
                 <form:errors path="titulo"/>
             </div>   
             <div>
-                <form:label path="">
+                <form:label class = "form-label"  path="artista">
                     Artista:
                 </form:label> 
-                <form:input path="artista" type="text"/>
-                <form:errors path="artista"/>
-            </div>  
+                <select name="idArtista">
+                    <c:forEach items="${artistas}" var="artista">
+                    <option value="${artista.id}">
+                    ${artista.nombre} ${artista.apellido}
+                    </option>
+                    </c:forEach>
+                </select>
+                
             <div>
-                <form:label path="titulo">
+                <form:label class = "form-label" path="titulo">
                     Álbum:
                 </form:label> 
                 <form:input path="album" type="text"/>
                 <form:errors path="album"/>
             </div>
             <div>
-                <form:label path="titulo">
+                <form:label class = "form-label" path="genero">
                     Género:
                 </form:label> 
                 <form:input path="genero" type="text"/>
                 <form:errors path="genero"/>
             </div>   
             <div>
-                <form:label path="titulo">
+                <form:label class = "form-label" path="idioma">
                     Idioma:
                 </form:label> 
                 <form:input path="idioma" type="text"/>

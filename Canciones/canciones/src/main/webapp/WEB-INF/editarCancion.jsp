@@ -18,35 +18,35 @@
         <form:form action="/canciones/processa/editar/${cancion.id}" method="POST" modelAttribute="cancion"> <%-- DEbe ser el mismo nombre que le pusimos en el model AddAttribute del controlador --%>
             <input type="hidden" name="_method" value="PUT">
             <div>
-                <form:label path="titulo">
+                <form:label class = "form-label" path="titulo">
                     Título:
                 </form:label> 
                 <form:input path="titulo" type="text"/>
                 <form:errors path="titulo"/>
             </div>   
             <div>
-                <form:label path="">
+                <form:label class = "form-label" path="artista">
                     Artista:
                 </form:label> 
                 <form:input path="artista" type="text"/>
                 <form:errors path="artista"/>
             </div>  
             <div>
-                <form:label path="titulo">
+                <form:label class = "form-label" path="titulo">
                     Álbum:
                 </form:label> 
                 <form:input path="album" type="text"/>
                 <form:errors path="album"/>
             </div>
             <div>
-                <form:label path="titulo">
+                <form:label class = "form-label"path="titulo">
                     Género:
                 </form:label> 
                 <form:input path="genero" type="text"/>
                 <form:errors path="genero"/>
             </div>   
             <div>
-                <form:label path="titulo">
+                <form:label class = "form-label" path="idioma">
                     Idioma:
                 </form:label> 
                 <form:input path="idioma" type="text"/>
